@@ -594,6 +594,8 @@ elif menu == "Dashboard":
     st.metric("💸 Despesas", f"R$ {despesas:,.2f}")
     st.metric("🏦 Saldo", f"R$ {saldo:,.2f}")
     st.metric("🏆 Patrimônio", f"R$ {saldo_total:,.2f}")
+    
+    col1, col2, col3, col4 = st.columns(4)
 
     with col1:
         st.markdown(f"""
@@ -1008,6 +1010,7 @@ elif menu == "Dashboard":
         .groupby("categoria")["valor"]
         .sum()
     )
+    
 
     st.subheader("📊 Análise Financeira")
 
